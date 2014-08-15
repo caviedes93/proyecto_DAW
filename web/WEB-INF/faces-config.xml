@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+<managed-bean>
+    <managed-bean-name>usuarioBean</managed-bean-name>
+    <managed-bean-class>entidades.web.UsuarioBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+<managed-bean>
+    <managed-bean-name>noticiaBean</managed-bean-name>
+    <managed-bean-class>entidades.web.NoticiaBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+<managed-bean>
+    <managed-bean-name>amistadBean</managed-bean-name>
+    <managed-bean-class>entidades.web.AmistadBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+<navigation-rule>
+    <from-view-id>/index.xhtml</from-view-id>
+    <navigation-case>
+        <from-outcome>exito</from-outcome>
+        <to-view-id>/faces/perfil.xhtml</to-view-id>
+    </navigation-case>
+    <navigation-case>
+        <from-outcome>error</from-outcome>
+        <to-view-id>/index.xhtml</to-view-id>
+    </navigation-case>
+</navigation-rule>
+</faces-config>

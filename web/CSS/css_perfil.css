@@ -1,0 +1,870 @@
+@media only screen and (min-width : 800px) {
+    .imagenOcultar{
+        
+        display:none;
+        
+        
+    }
+    body {
+        /* background: white; */
+        background-color: #ccc;
+         font-family: BlissfulThinking;
+    }
+
+    .sidebar {
+        background: #3b3b3b;
+        position: absolute;
+        float: left;
+        left: 0px;
+        top: 45px;
+        width: 155px;
+        height: 100%;
+        border: 1px black;
+        //border-radius: 10px;
+    }
+
+    .elementsSidebar {
+        color: #B1AAAA;
+        padding: 20px 20px 20px 20px;
+        text-align: center;
+    }
+
+    .elementsSidebar:hover {
+        color: white;
+        background: black;
+        cursor: pointer;
+    }
+
+    #icon {
+        position: relative;
+        text-align: center;
+        top: 50%;
+        left: 40%;
+        vertical-align: middle;
+    }
+
+    #profile {
+        //position:absolute;
+        float: left;
+        text-align: center;
+        top: 70%;
+        left: 25%;
+        vertical-align: left;
+    }
+
+    #home {
+        float: left;
+        text-align: center;
+        top: 70%;
+        left: 25%;
+        vertical-align: left;
+    }
+
+    #seccion {
+        position: relative;
+        background: lightgray;
+        float: right;
+    }
+
+    #map {
+        position: absolute;
+        top: 2px;
+        left: 160px;
+        z-index: 100;
+        height: 95%;
+        width: 95%;
+        border: 3px;
+        border-style: solid;
+    }
+
+    .mapaOculto {
+        display: none;
+    }
+    
+
+
+#informacion_usuario{
+    position:absolute;
+    //background: lightgray;
+    top:420px;
+    left: 60px;
+    //padding: 15px 50px 15px 50px;
+}
+
+
+    .mostrar {
+        display: block;
+    }
+
+    .oculto {
+        display: none;
+    }
+
+    .boton {
+        border-radius: 2px;
+        padding: 5px 5px 5px 5px;
+        background-color: #3b3b3b;
+        color: #B1AAAA;
+    }
+
+    .boton:hover {
+        background-color: black;
+        color: white;
+    }
+
+    #btnGuardarRuta {
+        position: relative;
+        border-radius: 2px;
+        left: 20%;
+        top: 15%;
+        padding: 5px 5px 5px 5px;
+        background-color: #3b3b3b;
+        color: #B1AAAA;
+        z-index: 200;
+    }
+
+    /*
+#transparente{
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    width: 100%;
+    height: 100%;
+    background: grey;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+}*/
+
+
+    #mensaje {
+        border: 8px solid #3b3b3b;
+        position: fixed;
+        left: 40%;
+        top: 30%;
+        z-index: 100;
+        width: 440px;
+        height: 120px;
+        background: white;
+    }
+
+    #msje {
+        font-family: fantasy;
+        text-align: center;
+    }
+
+    
+    
+
+#datos_usuario{
+    position: absolute;
+    border:1px solid lightgray;
+    padding: 10px 10px 15px 30px;
+    border-radius: 10px;
+    width: 230px;
+    background: white;
+    overflow: auto;
+}
+
+
+
+#informacion_usuario{
+    position:absolute;
+    //background: lightgray;
+    top:420px;
+    left: 60px;
+    //padding: 15px 50px 15px 50px;
+}
+
+
+#vehiculo{
+    position: absolute;
+    top: 355px;
+    left: 0px;
+    padding: 5px 60px 5px 80px;
+    border:1px solid lightgray;
+    margin-top: 5px;
+    border-radius: 10px;
+    background: white;
+    width: 129px;
+}
+
+#amigos{
+    position:absolute;
+    padding: 15px 125px 15px 50px;
+    top: 475px;
+    margin-top: 30px;
+    height:200px;
+    border:1px solid lightgray;
+    border-radius: 10px;
+    background: white;
+    overflow: auto;
+    }
+    
+    .user_data{
+        padding: 2px 0px 2px 0px;
+    }
+ 
+
+
+    #contenedor {
+        position: absolute;
+        left: 155px;
+        top: 0px;
+        width: 100%;
+        background: #e9eaed;
+    }
+
+    .top {
+        background-color: #3b3b3b;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 30px;
+        width: 100%;
+        background-color: #3b3b3b;
+        letter-spacing: 2px;
+        padding: 20px 0px 0px 55px;
+        font-family: fantasy;
+        line-height: 1.2;
+        font-size: 1em;
+    }
+    
+    
+.publicaciones{
+    position:absolute;
+    border: 1px;
+    height: auto; 
+    margin-bottom: 15px;
+    margin-top: 25px;
+    padding: 20px 10px 20px 10px;
+    top:490px;
+    left: 410px;
+    }
+#publicar{
+    border-radius: 2px;
+    padding: 5px 5px 5px 5px;
+    background-color: #3b3b3b;
+    color: #B1AAAA;
+    margin-left: 10px;
+    top: 110px;
+    left: 75%;
+    position: absolute;
+}
+
+#publicar:hover{
+    background-color: black;
+    color:white;
+}
+
+    #logo {
+        position: absolute;
+        left: 50%;
+        top: 5px;
+    }
+
+  
+.foto{
+    position: absolute;
+    top : 50px;
+    left: 0px;
+    height: 250px;
+    width: 100%;
+    //background-color: black;
+    background-image: url("../images/espol.jpg") ;
+}
+
+    .perfil {
+        position: absolute;
+        background-color: #3b3b3b;
+        top: 200px;
+        left: 100px;
+        height: 200px;
+        width: 180px;
+        z-index: 3;
+    }
+
+    .foto_perfil {
+        position: absolute;
+        background-color: whitesmoke;
+        top: 5px;
+        left: 12px;
+        border-radius: 10px;
+        border: 3px solid white;
+        height: 150px;
+        width: 150px;
+    }
+
+    .info {
+        position: absolute;
+        top: 162px;
+        left: 30px;
+    }
+
+    .info_txt {
+        margin: 0px 0px 1px 0px;
+        text-align: center;
+        color: white;
+        font-family: monospace;
+    }
+
+    .publicaciones {
+    }
+
+    .publicar {
+        position: absolute;
+        background: #B1AAAA;
+        padding: 5px 5px 5px 5px;
+        top: 325px;
+        left: 400px;
+        height: 150px;
+        width: 600px;
+        border-radius: 10px;
+    }
+
+
+
+    #comentario {
+        position: absolute;
+        top: 25px;
+        left: 50px;
+        height: 70px;
+        width: 500px;
+    }
+    
+    
+     div[id^="noticia"]{
+    border: 1px;
+    border-style: solid;
+    border-color: lightgray;
+    border-radius: 10px;
+    height: auto;
+    width: 500px;
+    background-color: white;    
+    margin-bottom: 15px;
+    margin-top: 25px;
+    padding: 20px 10px 20px 10px;
+    //overflow: auto;
+}
+
+#comentarios{
+    background: #edeff4;
+}
+
+.comentario{
+    
+}
+
+div[id^="usuario"]{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+div[id^="hora_publicacion"]{
+    color: gray;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 2px 0px 5px 2px;
+    margin-left: 3px;
+    margin-bottom: 4px;
+}
+
+p[id^="descripcion"]{
+    font-size: 16px;
+    margin-left: 8px;
+    margin-top: 5px;
+}
+
+input[id^="texto"]{
+    margin-bottom: 15px;
+    margin-left: 13px;
+    width: 250px;
+}
+
+input[id^="boton"]{
+    border-radius: 2px;
+    padding: 5px 5px 5px 5px;
+    background-color: #3b3b3b;
+    color: #B1AAAA;
+    margin-left: 10px;
+}
+
+
+input[id^="boton"]:hover{
+    background-color: black;
+    color:white;
+}
+
+div[id^="comentarios"]{
+    background: #edeff4;
+    overflow: auto;
+    height: 100px;
+}
+
+div[id^="usuario_comentario"]{
+    padding: 10px 0px 3px 10px;
+}
+
+
+div[id^="comentario"]{
+    margin-left: 25px;
+    left: 20px;
+}
+
+.user_friend{
+    padding-bottom: 2px;
+}
+    
+    @font-face {
+font-family: BlissfulThinking;
+src: url("BlissfulThinking.otf") format("opentype");
+}
+
+@font-face {
+font-family: BlissfulThinking;
+font-weight: bold;
+src: url("BlissfulThinking.otf") format("opentype");
+}
+}
+@media only screen and (max-width : 799px) {
+    
+    #datos_usuario{
+    position: absolute;
+    border:1px solid lightgray;
+    padding: 10px 10px 15px 30px;
+    border-radius: 10px;
+    width: 230px;
+    background: white;
+    overflow: auto;
+}
+
+
+
+#informacion_usuario{
+    position:absolute;
+    //background: lightgray;
+    top:420px;
+    left: 60px;
+    //padding: 15px 50px 15px 50px;
+}
+
+
+#vehiculo{
+    position: absolute;
+    top: 355px;
+    left: 0px;
+    padding: 5px 60px 5px 80px;
+    border:1px solid lightgray;
+    margin-top: 5px;
+    border-radius: 10px;
+    background: white;
+    width: 129px;
+}
+
+#amigos{
+    position:absolute;
+    padding: 15px 125px 15px 50px;
+    top: 475px;
+    margin-top: 30px;
+    height:200px;
+    border:1px solid lightgray;
+    border-radius: 10px;
+    background: white;
+    overflow: auto;
+    }
+    
+    
+    div[id^="noticia"]{
+    border: 1px;
+    border-style: solid;
+    border-color: lightgray;
+    border-radius: 10px;
+    height: auto;
+    width: 500px;
+    background-color: white;    
+    margin-bottom: 15px;
+    margin-top: 25px;
+    padding: 20px 10px 20px 10px;
+    //overflow: auto;
+}
+    
+    .user_data{
+        padding: 2px 0px 2px 0px;
+    }
+ 
+    
+    .imagenOcultar{
+        
+        left:10px;
+        top:8px;
+        position: absolute;
+        
+    }
+    body {
+        background-color: #ccc;
+         font-family: BlissfulThinking;
+    }
+    
+    div[id^="usuario"]{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+div[id^="hora_publicacion"]{
+    color: gray;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 2px 0px 5px 2px;
+    margin-left: 3px;
+    margin-bottom: 4px;
+}
+
+p[id^="descripcion"]{
+    font-size: 16px;
+    margin-left: 8px;
+    margin-top: 5px;
+}
+
+input[id^="texto"]{
+    margin-bottom: 15px;
+    margin-left: 13px;
+    width: 250px;
+}
+
+input[id^="boton"]{
+    border-radius: 2px;
+    padding: 5px 5px 5px 5px;
+    background-color: #3b3b3b;
+    color: #B1AAAA;
+    margin-left: 10px;
+}
+
+
+input[id^="boton"]:hover{
+    background-color: black;
+    color:white;
+}
+
+div[id^="comentarios"]{
+    background: #edeff4;
+    overflow: auto;
+    height: 100px;
+}
+
+div[id^="usuario_comentario"]{
+    padding: 10px 0px 3px 10px;
+}
+
+
+div[id^="comentario"]{
+    margin-left: 25px;
+    left: 20px;
+}
+
+.user_friend{
+    padding-bottom: 2px;
+}
+
+    .sidebar {
+    display: none;
+        background: #3b3b3b;
+        position: absolute;
+        float: left;
+        left: 0px;
+        top: 100px;
+        width: 155px;
+        height: 100%;
+        border: 1px black;
+    }
+    .sidebarDisplay {
+       background-color:rgba(39, 32, 32, 0.50);
+       /* background: #3b3b3b;*/
+        position: absolute;
+        float: left;
+        left: 0px;
+        top: 45px;
+        width: 155px;
+        height: 100%;
+        border: 1px black;
+        z-index: 20;
+    }
+
+    .elementsSidebar {
+        color: #B1AAAA;
+        padding: 20px 20px 20px 20px;
+        text-align: center;
+    }
+
+    .elementsSidebar:hover {
+        color: white;
+        background: black;
+        cursor: pointer;
+    }
+    
+    #datos_usuario{
+    position: absolute;
+    border:1px solid lightgray;
+    padding: 10px 10px 15px 30px;
+    border-radius: 10px;
+    width: 230px;
+    background: white;
+    overflow: auto;
+}
+
+    #contenedor {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        background: #e9eaed;
+    }
+
+    .top {
+        background-color: #3b3b3b;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 30px;
+        width: 100%;
+        background-color: #3b3b3b;
+        letter-spacing: 2px;
+        padding: 20px 0px 0px 55px;
+        font-family: fantasy;
+        line-height: 1.2;
+        font-size: 1em;
+    }
+    
+    
+.publicaciones{
+    position:absolute;
+    border: 1px;
+    height: auto; 
+    margin-bottom: 15px;
+    margin-top: 25px;
+    padding: 20px 10px 20px 10px;
+    top:490px;
+    left: 370px;
+    }
+#publicar{
+    border-radius: 2px;
+    padding: 5px 5px 5px 5px;
+    background-color: #3b3b3b;
+    color: #B1AAAA;
+    margin-left: 10px;
+    top: 110px;
+    left: 65%;
+    position: absolute;
+}
+
+#publicar:hover{
+    background-color: black;
+    color:white;
+}
+
+    #icon {
+        position: relative;
+        text-align: center;
+        top: 50%;
+        left: 40%;
+        vertical-align: middle;
+    }
+
+    #profile {
+        //position:absolute;
+        float: left;
+        text-align: center;
+        top: 70%;
+        left: 25%;
+        vertical-align: left;
+    }
+
+    #home {
+        float: left;
+        text-align: center;
+        top: 70%;
+        left: 25%;
+        vertical-align: left;
+    }
+
+    #seccion {
+        position: relative;
+        background: lightgray;
+        float: right;
+    }
+
+    #map {
+        position: absolute;
+        top: 2px;
+        left: 160px;
+        z-index: 100;
+        height: 95%;
+        width: 95%;
+        border: 3px;
+        border-style: solid;
+    }
+
+    .mapaOculto {
+        display: none;
+    }
+
+
+    .mostrar {
+        display: block;
+    }
+
+    .oculto {
+        display: none;
+    }
+
+    .boton {
+        border-radius: 2px;
+        padding: 5px 5px 5px 5px;
+        background-color: #3b3b3b;
+        color: #B1AAAA;
+    }
+
+    .boton:hover {
+        background-color: black;
+        color: white;
+    }
+
+    #btnGuardarRuta {
+        position: relative;
+        border-radius: 2px;
+        left: 20%;
+        top: 15%;
+        padding: 5px 5px 5px 5px;
+        background-color: #3b3b3b;
+        color: #B1AAAA;
+        z-index: 200;
+    }
+    
+    #informacion_usuario{
+    position:absolute;
+    //background: lightgray;
+    top:520px;
+    left: 0px;
+    //padding: 15px 50px 15px 50px;
+}
+
+
+    /*
+#transparente{
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 90;
+    width: 100%;
+    height: 100%;
+    background: grey;
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+}*/
+
+
+    #mensaje {
+        border: 8px solid #3b3b3b;
+        position: fixed;
+        left: 40%;
+        top: 30%;
+        z-index: 100;
+        width: 440px;
+        height: 120px;
+        background: white;
+    }
+
+    #msje {
+        font-family: fantasy;
+        text-align: center;
+    }
+
+
+    
+
+    #logo {
+        position: absolute;
+        left: 50%;
+        top: 5px;
+    }
+
+ .foto{
+    position: absolute;
+    top : 50px;
+    left: 0px;
+    height: 250px;
+    width: 100%;
+    //background-color: black;
+    background-image: url("../images/espol.jpg") ;
+}
+
+    .perfil {
+        position: absolute;
+        background-color: #3b3b3b;
+        top: 200px;
+        left: 0px;
+        height: 200px;
+        width: 180px;
+        z-index: 3;
+    }
+
+    .foto_perfil {
+        position: absolute;
+        background-color: whitesmoke;
+        top: 5px;
+        left: 0px;
+        border-radius: 10px;
+        border: 3px solid white;
+        height: 150px;
+        width: 70%;
+    }
+
+    .info {
+        position: absolute;
+        top: 162px;
+        left: 30px;
+    }
+
+    .info_txt {
+        margin: 0px 0px 1px 0px;
+        text-align: center;
+        color: white;
+        font-family: monospace;
+    }
+
+    .publicaciones {
+    }
+
+    .publicar {
+        position: absolute;
+        background: #B1AAAA;
+        padding: 5px 5px 5px 5px;
+        top: 325px;
+        left: 200px;
+        height: 150px;
+        width: 70%;
+        border-radius: 10px;
+    }
+
+
+
+    #comentario {
+        position: absolute;
+        top: 25px;
+        left: 50px;
+        height: 70px;
+        width: 75%;
+    }
+    
+    @font-face {
+font-family: BlissfulThinking;
+src: url("BlissfulThinking.otf") format("opentype");
+}
+
+@font-face {
+font-family: BlissfulThinking;
+font-weight: bold;
+src: url("BlissfulThinking.otf") format("opentype");
+}
+}

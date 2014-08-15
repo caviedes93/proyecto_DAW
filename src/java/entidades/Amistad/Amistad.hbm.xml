@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13-ago-2014 2:25:45 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="entidades.Amistad.Amistad" table="amistad" catalog="carona">
+        <id name="idAmistad" type="java.lang.Integer">
+            <column name="idAmistad" />
+            <generator class="identity"></generator>
+        </id>
+        <many-to-one name="usuarioByUser1" class="entidades.Usuario.Usuario" fetch="select">
+            <column name="user1" />
+        </many-to-one>
+        <many-to-one name="usuarioByUser2" class="entidades.Usuario.Usuario" fetch="select">
+            <column name="user2" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <head>
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="./CSS/css_buscarRuta.css"/>
+        <link rel="icon" type="image/png" href="./images/icon.ico"/>
+    </head>
+    <body>
+        <div id="top" class="top"><img alt="logo" class="imagenOcultar" id="menuDesplegable" src="./images/menutransparent.png"/> <img alt="logo" id="logo" src="./images/logo.png"/></div>
+            <div id="sideBar" class="sidebar">
+            <!--<div><span id="icon"><img id="logo" src="logo.png"></span></div>-->
+            <div id="menu_home" class="elementsSidebar" ><img id="icon_home" src="./images/home.png"/> Home</div>
+            <div  id="menu_profile" class="elementsSidebar"><img id="icon_profile" src="./images/perfil.png"/>Perfil</div>
+            <div  id="menu_BuscarRuta" class="elementsSidebar"><img id="icon_ruta_search" src="./images/ruta_search.png"/>Buscar Ruta</div>
+            <div  id="menu_OfertarRuta" class="elementsSidebar"><span id="OfertarRuta"><img id="icon_rootOffer" src="./images/ofertar_ruta.png"/></span> Ofertar Ruta</div>
+            <div  class="elementsSidebar"><span id="Notificaciones"><img id="icon_notifications" src="./images/notificacion.png"/></span>Notificacion</div>
+            </div>
+        
+        <div id="results">Resultados de Búsqueda</div>
+        <div id="transparente" class="oculto"></div>
+        <div id="mensaje" class="mostrar">
+            <p id="msje">Ingrese Fecha de su solicitud:</p> 
+            <input type="time" name="time" id="time"/>
+            <input type="date" name="date" id="date"/>
+            <input type="button" id="botonAceptar" class="boton" value="Aceptar"/>
+            <input type="button" id="botonCancelar" class="boton" value="Cancelar"/>
+        </div>
+        <div id="map" class="oculto"></div>
+        
+        <input type="button" id="btnGuardarRuta" class="oculto" value="Buscar Ruta"/>
+        <div id="resultados" class="prueba"></div>
+    </body>
+</html>

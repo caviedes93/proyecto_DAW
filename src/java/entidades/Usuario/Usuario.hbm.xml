@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13-ago-2014 2:25:45 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="entidades.Usuario.Usuario" table="usuario" catalog="carona">
+        <id name="idUsuario" type="java.lang.Integer">
+            <column name="idUsuario" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="auto" class="entidades.Auto.Auto" fetch="select">
+            <column name="idAuto" />
+        </many-to-one>
+        <property name="user" type="string">
+            <column name="user" length="20" />
+        </property>
+        <property name="pass" type="string">
+            <column name="pass" length="20" />
+        </property>
+        <property name="nombre" type="string">
+            <column name="nombre" length="50" />
+        </property>
+        <property name="apellido" type="string">
+            <column name="apellido" length="50" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="direccion" length="100" />
+        </property>
+        <property name="sexo" type="java.lang.Character">
+            <column name="sexo" length="1" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="25" />
+        </property>
+        <property name="telefono" type="string">
+            <column name="telefono" length="15" />
+        </property>
+        <property name="celular" type="string">
+            <column name="celular" length="15" />
+        </property>
+    </class>
+</hibernate-mapping>

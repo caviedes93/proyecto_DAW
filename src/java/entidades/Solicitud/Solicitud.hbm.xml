@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13-ago-2014 2:25:45 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="entidades.Solicitud.Solicitud" table="solicitud" catalog="carona">
+        <id name="idSolicitud" type="java.lang.Integer">
+            <column name="idSolicitud" />
+            <generator class="identity"></generator>
+        </id>
+        <many-to-one name="ruta" class="entidades.Ruta.Ruta" fetch="select">
+            <column name="idRuta" />
+        </many-to-one>
+        <many-to-one name="estado" class="entidades.Estado.Estado" fetch="select">
+            <column name="idEstado" />
+        </many-to-one>
+        <many-to-one name="usuario" class="entidades.Usuario.Usuario" fetch="select">
+            <column name="idUsuario" />
+        </many-to-one>
+        <property name="latitud" type="java.lang.Float">
+            <column name="latitud" precision="12" scale="0" />
+        </property>
+        <property name="longitud" type="java.lang.Float">
+            <column name="longitud" precision="12" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

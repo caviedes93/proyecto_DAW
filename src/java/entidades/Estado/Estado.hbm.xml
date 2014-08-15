@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13-ago-2014 2:25:45 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="entidades.Estado.Estado" table="estado" catalog="carona">
+        <id name="idEstado" type="java.lang.Integer">
+            <column name="idEstado" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="nombreEstado" type="string">
+            <column name="nombre_estado" length="20" />
+        </property>
+        <set name="solicituds" table="solicitud" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idEstado" />
+            </key>
+            <one-to-many class="entidades.Solicitud.Solicitud" />
+        </set>
+    </class>
+</hibernate-mapping>

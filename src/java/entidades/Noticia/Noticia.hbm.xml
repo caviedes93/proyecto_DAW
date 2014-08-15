@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13-ago-2014 2:25:45 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="entidades.Noticia.Noticia" table="noticia" catalog="carona">
+        <id name="idNoticia" type="java.lang.Integer">
+            <column name="idNoticia" />
+            <generator class="identity"></generator>
+        </id>
+        <many-to-one name="usuario" class="entidades.Usuario.Usuario" fetch="select">
+            <column name="idUsuario" />
+        </many-to-one>
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="100" />
+        </property>
+        <property name="fecha" type="timestamp">
+            <column name="fecha" length="19" not-null="true" />
+        </property>
+        <set name="comentarios" table="comentario" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idNoticia" />
+            </key>
+            <one-to-many class="entidades.Comentario.Comentario" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,362 @@
+@media only screen and (min-width : 800px) {
+    
+     .imagenOcultar{
+        
+        display:none;
+        
+        
+    }
+    
+    
+    @font-face {
+font-family: BlissfulThinking;
+src: url("BlissfulThinking.otf") format("opentype");
+}
+
+@font-face {
+font-family: BlissfulThinking;
+font-weight: bold;
+src: url("BlissfulThinking.otf") format("opentype");
+}
+body{
+    font-family: BlissfulThinking;
+
+    background: white;
+}
+.sidebar {
+        background: #3b3b3b;
+        position: absolute;
+        float: left;
+        left: 0px;
+        top: 45px;
+        width: 155px;
+        height: 100%;
+        border: 1px black;
+    }
+.elementsSidebar{
+    color:#B1AAAA;
+    padding:20px 20px 20px 20px;
+    text-align: center;
+}
+
+.elementsSidebar:hover{
+    color:white;
+    background: black;
+    cursor:pointer;
+}
+
+#icon{
+    position:relative;
+    text-align: center;
+    top: 50%;
+    left:40%;
+    vertical-align:middle;
+}
+
+#profile{
+    //position:absolute;
+    float:left;
+    text-align: center;
+    top: 70%;
+    left:25%;
+    vertical-align:left;
+}
+
+#home{
+    float:left;
+    text-align: center;
+    top: 70%;
+    left:25%;
+    vertical-align:left;
+}
+#seccion{
+    position:relative;
+    background: lightgray;
+    float:right;
+}
+
+#map{
+    position:absolute;
+    top:10%;
+    left:13%;
+    z-index:100;
+    height: 95%;
+    width: 85%;
+    border: 3px;
+    border-style: solid;
+      }
+
+
+
+
+.mostrar{
+    display:block;
+}
+.oculto{
+    display: none;
+}
+
+.boton{
+    border-radius: 2px;
+    padding: 5px 5px 5px 5px;
+    background-color: #3b3b3b;
+    color: #B1AAAA;
+    
+}
+
+.boton:hover{
+    background-color: black;
+    color:white;
+}
+
+#btnGuardarRuta{
+    position: absolute;
+    border-radius: 2px;
+    left:80%;
+    top:12%;
+    padding: 5px 5px 5px 5px;
+    background-color: #3b3b3b;
+    color: #B1AAAA;
+    z-index: 200;
+    
+}
+
+#btnGuardarRuta:hover{
+    background-color: black;
+    color:white;
+}
+
+.top{
+    position: absolute;
+    top : 0px;
+    left: 0px;
+    height: 30px;
+    width: 100%;
+    background-color: #3b3b3b;
+    color:white;
+    letter-spacing: 2px;
+    padding: 20px 0px 0px 55px;
+    font-family: fantasy;
+    line-height: 1.2; 
+    font-size: 1em;
+    
+}
+
+
+#mensaje{
+   border: 8px solid #3b3b3b ;
+   position: fixed;
+   left: 40%;
+   top:40%;
+   z-index: 100;
+   width: 440px;
+   height: 180px;
+   background: white;
+}
+
+#msje{
+    text-align: center;
+}
+
+#logo{
+    position:absolute;
+    left:45%;
+    top:8px;
+}
+
+#breveDescripcion{
+    padding:8px 0px 0px 5px;
+}
+
+}
+
+
+@media only screen and (max-width : 799px) {
+    .imagenOcultar{
+        
+        left:10px;
+        top:8px;
+        position: absolute;
+        
+    }
+ @font-face {
+font-family: BlissfulThinking;
+src: url("BlissfulThinking.otf") format("opentype");
+}
+
+@font-face {
+font-family: BlissfulThinking;
+font-weight: bold;
+src: url("BlissfulThinking.otf") format("opentype");
+}
+body{
+    font-family: BlissfulThinking;
+
+    background: white;
+}
+ .sidebar {
+    display: none;
+        background: #3b3b3b;
+        position: absolute;
+        float: left;
+        left: 0px;
+        top: 100px;
+        width: 155px;
+        height: 100%;
+        border: 1px black;
+    }
+    .sidebarDisplay {
+        background-color:rgba(39, 32, 32, 0.50);
+       /* background: #3b3b3b;*/
+        position: absolute;
+        float: left;
+        left: 0px;
+        top: 45px;
+        width: 155px;
+        height: 100%;
+        border: 1px black;
+        z-index: 110;
+    }
+
+.elementsSidebar{
+    color:#B1AAAA;
+    padding:20px 20px 20px 20px;
+    text-align: center;
+}
+
+.elementsSidebar:hover{
+    color:white;
+    background: black;
+    cursor:pointer;
+}
+
+#icon{
+    position:relative;
+    text-align: center;
+    top: 50%;
+    left:40%;
+    vertical-align:middle;
+}
+
+#profile{
+    //position:absolute;
+    float:left;
+    text-align: center;
+    top: 70%;
+    left:25%;
+    vertical-align:left;
+}
+
+#home{
+    float:left;
+    text-align: center;
+    top: 70%;
+    left:25%;
+    vertical-align:left;
+}
+#seccion{
+    position:relative;
+    background: lightgray;
+    float:right;
+}
+
+#map{
+    position:absolute;
+    top:10%;
+    left:0px;
+    z-index:100;
+    height: 95%;
+    width: 100%;
+    border: 3px;
+    border-style: solid;
+      }
+
+
+
+
+.mostrar{
+    display:block;
+}
+.oculto{
+    display: none;
+}
+
+.boton{
+    border-radius: 2px;
+    padding: 5px 5px 5px 5px;
+    background-color: #3b3b3b;
+    color: #B1AAAA;
+    
+    
+
+    font-family: BlissfulThinking;
+
+    
+}
+
+.boton:hover{
+    background-color: black;
+    color:white;
+}
+
+#btnGuardarRuta{
+    position: absolute;
+    border-radius: 2px;
+    left:80%;
+    top:12%;
+    padding: 5px 5px 5px 5px;
+    background-color: #3b3b3b;
+    color: #B1AAAA;
+    z-index: 200;
+    
+    
+    
+}
+
+#btnGuardarRuta:hover{
+    background-color: black;
+    color:white;
+}
+
+.top{
+    position: absolute;
+    top : 0px;
+    left: 0px;
+    height: 30px;
+    width: 100%;
+    background-color: #3b3b3b;
+    color:white;
+    letter-spacing: 2px;
+    padding: 20px 0px 0px 55px;
+    line-height: 1.2; 
+    font-size: 1em;
+    
+}
+
+
+#mensaje{
+   border: 8px solid #3b3b3b ;
+   position: fixed;
+   left: 80px;
+   top:40%;
+   z-index: 100;
+   width: 440px;
+   height: 180px;
+   background: white;
+}
+
+#msje{
+    text-align: center;
+}
+
+#logo{
+    position:absolute;
+    left:45%;
+    top:8px;
+}
+
+#breveDescripcion{
+    padding:8px 0px 0px 5px;
+}
+
+}

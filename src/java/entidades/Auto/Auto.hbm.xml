@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13-ago-2014 2:25:45 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="entidades.Auto.Auto" table="auto" catalog="carona">
+        <id name="idAuto" type="java.lang.Integer">
+            <column name="idAuto" />
+            <generator class="identity"></generator>
+        </id>
+        <property name="matricula" type="string">
+            <column name="matricula" length="20" />
+        </property>
+        <property name="color" type="string">
+            <column name="color" length="20" />
+        </property>
+        <property name="marca" type="string">
+            <column name="marca" length="20" />
+        </property>
+        <property name="modelo" type="string">
+            <column name="modelo" length="20" />
+        </property>
+        <property name="capacidad" type="int">
+            <column name="capacidad" />
+        </property>
+        <set name="usuarios" table="usuario" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="idAuto" />
+            </key>
+            <one-to-many class="entidades.Usuario.Usuario" />
+        </set>
+    </class>
+</hibernate-mapping>

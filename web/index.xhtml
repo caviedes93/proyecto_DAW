@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+        <link rel="icon" type="image/png" href="./images/icon.ico" />
+        <link rel="stylesheet" href="./CSS/css_login.css"/>
+    </h:head>
+    <h:body>
+        <div id="top"><img id="logo" src="./images/logo.png"/></div>
+        <div class="bienvenido"><h2 align="center">Bienvenido a Carona Solidaria</h2><p></p></div>
+        <div id="descripcionIndex"> <p>Carona Solidaria es tu solucion para salir de una manera segura y rapida de la ESPOL! </p> </div>
+        <div id="msjePag"><p>ENTRA YA! ¿Que estas Esperando?</p></div>
+        <div class="inicio_sesion">
+            <h:form>
+                <h:outputLabel id="lblUsuario" value="Usuario:"></h:outputLabel>
+                <h:inputText id="usuario" class="text_box" value="#{usuarioBean.user}" size="20" ></h:inputText>
+                <h:outputLabel id="lblPass" value="Contraseña: "></h:outputLabel>
+                <h:inputText id="contrasena" class="text_box" value="#{usuarioBean.pass}" ></h:inputText>
+                <h:commandButton id="iniciar" class="boton" value="Iniciar sesión" action="#{usuarioBean.validar()}"></h:commandButton>
+            </h:form>
+        </div>
+        <div class="registro">
+            <p>¿Eres nuevo en Carona Solidaria?</p>
+            <form>
+                <input type="text" id="nombre" class="text_box" placeholder="Nombre Completo" size="35" ></input>
+                <input type="text" id="correo" class="text_box" placeholder="Correo Espol" size="35" ></input>
+                <input type="text" id="newContrasena" class="text_box" placeholder="Contraseña" size="35" ></input>
+                <input type="radio" name="group1" value="si"></input> Si                
+                <input type="radio" name="group1" value="no"></input>No<br></br>
+                    <input type="text" id="placa" class="text_box" placeholder="Placa de Carro" size="35" ></input>
+                    <input type="text" id="descripcion" class="text_box" placeholder="Descripcion del Vehiculo" size="38" ></input>
+                    <input type="submit" id="registrar" class="boton" value="Registrate"></input>
+            </form>
+        </div>  
+        <div id="transparente" class="oculto"></div>
+        <div id="mensaje" class="oculto">
+            <p id="msje">Combinación de nombre de usuario/correo electrónico y contraseña errónea.</p> 
+            <input type="button" id="botonEmergente" class="boton" value="Aceptar"></input>
+        </div>
+    <div id="footer">Copyright © Carona Solidaria 2014 All rights reserved.</div>
+    </h:body>
+</html>
+

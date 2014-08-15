@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13-ago-2014 2:25:45 by Hibernate Tools 3.6.0 -->
+<hibernate-mapping>
+    <class name="entidades.Imagen.Imagen" table="imagen" catalog="carona">
+        <id name="idImagen" type="java.lang.Integer">
+            <column name="idImagen" />
+            <generator class="identity"></generator>
+        </id>
+        <many-to-one name="usuario" class="entidades.Usuario.Usuario" fetch="select">
+            <column name="idUsuario" />
+        </many-to-one>
+        <property name="src" type="string">
+            <column name="src" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>
