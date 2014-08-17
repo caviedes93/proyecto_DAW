@@ -50,8 +50,8 @@ public class UsuarioDAOHibernate implements UsuarioDAO{
     }
 
     @Override
-    public Usuario validarUsuario(String user, String pass) {
-        Criterion res= Restrictions.sqlRestriction("user='"+user+"' and pass='"+pass+"'");
+    public Usuario obtenerUsuario(String user) {
+        Criterion res= Restrictions.sqlRestriction("user='"+user+"'");
         Criteria criteria = this.sesion.createCriteria(Usuario.class);
         criteria.add(res);
         return (Usuario)criteria.uniqueResult();

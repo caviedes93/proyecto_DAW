@@ -8,6 +8,7 @@ package entidades.web;
 
 import entidades.Noticia.Noticia;
 import entidades.Noticia.NoticiaRN;
+import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import javax.faces.context.FacesContext;
@@ -32,4 +33,13 @@ public class NoticiaBean {
         this.noticia = noticia;
     }
     
+    public List<Noticia> noticiasGlobales(int idUsuario){
+        NoticiaRN noticia = new NoticiaRN();
+        return noticia.noticiaGlobales(idUsuario);
+    }
+    
+    public List<Noticia> noticiaUsuario(int idUsuario){
+        NoticiaRN noticia = new NoticiaRN();
+        return noticia.noticiaUsuario(idUsuario);
+    }
 }

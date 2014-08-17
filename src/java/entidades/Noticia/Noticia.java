@@ -69,9 +69,11 @@ public class Noticia  implements java.io.Serializable {
         this.comentarios = comentarios;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "Noticia{" + "idNoticia=" + idNoticia + ", descripcion=" + descripcion + ", fecha=" + fecha + '}';
+    }
+    
 }
 
 

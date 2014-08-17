@@ -20,34 +20,29 @@ public class UsuarioBean {
     private String pass;
     
     public String guardar(){
-        FacesContext context = FacesContext.getCurrentInstance();
         UsuarioRN usuarioRN = new UsuarioRN();
 		usuarioRN.guardar(this.usuario);
         return "guardar";
     }
     
     public Usuario obtenerDatos(int id){
-        FacesContext context = FacesContext.getCurrentInstance();
         UsuarioRN usuarioRN = new UsuarioRN();
         return  usuarioRN.cargar(id);
 
     }
     
     public String validar(){
-       /* UsuarioRN usuarioRN = new UsuarioRN();
-        this.usuario=usuarioRN.validarUsuario(this.user, this.pass);
-        if(this.usuario!=null){
-            return "exito";
-        }else
-            return "error";*/
-        
-        UsuarioRN usuarioRN = new UsuarioRN();
-        
+        UsuarioRN usuarioRN = new UsuarioRN();        
         boolean validacion= usuarioRN.validaUsuario(this.user, this.pass);
-        if(validacion==true){
+        if(validacion){
+            this.usuario=usuarioRN.obtenerUsuario(this.user);
             return "exito";
         }else
             return "error";
+    }
+    
+    public int obtenerIdUsuario(String user){
+        return 1;
     }
     
 

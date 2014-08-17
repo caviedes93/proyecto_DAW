@@ -31,7 +31,11 @@ public class NoticiaRN {
     public Noticia cargar(Integer idComentario){
         return this.nuevo.cargar(idComentario);
     }
-    public List<Noticia> listar(){
-        return this.nuevo.listar();
+    public List<Noticia> noticiaUsuario(int idUsuario){
+        return this.nuevo.noticiaUsuario(idUsuario);
+    }
+    
+    public List<Noticia> noticiaGlobales(int idUsuario){
+        return this.nuevo.noticiaGlobales(idUsuario);
     }
 }

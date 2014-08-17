@@ -6,7 +6,7 @@
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/carona?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password">bases13</property>
+    <property name="hibernate.connection.password">caviedes93</property>
     <mapping resource="entidades/Ruta/Ruta.hbm.xml"/>
     <mapping resource="entidades/Solicitud/Solicitud.hbm.xml"/>
     <mapping resource="entidades/Usuario/Usuario.hbm.xml"/>

@@ -17,5 +17,6 @@ public interface NoticiaDAO {
     public void actualizar(Noticia nuevo);
     public void borrar(Noticia nuevo);
     public Noticia cargar(Integer nuevo);
-    public List<Noticia> listar();
+    public List<Noticia> noticiaUsuario(int idUsuario);
+    public List<Noticia> noticiaGlobales(int idUsuario);
 }

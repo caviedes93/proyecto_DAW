@@ -35,8 +35,8 @@ public class UsuarioRN {
         return this.user.listar();
     }
     
-    public Usuario validarUsuario(String user, String pass){
-        return this.user.validarUsuario(user, pass);
+    public Usuario obtenerUsuario(String user){
+        return this.user.obtenerUsuario(user);
     }
     public boolean validaUsuario(String user, String pass){
         return this.user.validaUsuario(user, pass);

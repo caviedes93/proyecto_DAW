@@ -16,61 +16,74 @@ and open the template in the editor.
         <link rel="stylesheet" href="./CSS/css_perfil.css"></link>
         <link rel="icon" type="image/png" href="./images/icon.ico"></link>
     </head>
-    <h:body>
-        
+    <h:body>        
         <div id="top" class="top"><img alt="logo" class="imagenOcultar" id="menuDesplegable" src="./images/menutransparent.png"/> <img alt="logo" id="logo" src="./images/logo.png"/></div>
-            <div id="sideBar" class="sidebar">
+        <div id="sideBar" class="sidebar">
             <!--<div><span id="icon"><img id="logo" src="logo.png"></span></div>-->
             <div id="menu_home" class="elementsSidebar" ><img id="icon_home" src="./images/home.png"/> Home</div>
             <div  id="menu_profile" class="elementsSidebar"><img id="icon_profile" src="./images/perfil.png"/>Perfil</div>
             <div  id="menu_BuscarRuta" class="elementsSidebar"><img id="icon_ruta_search" src="./images/ruta_search.png"/>Buscar Ruta</div>
             <div  id="menu_OfertarRuta" class="elementsSidebar"><span id="OfertarRuta"><img id="icon_rootOffer" src="./images/ofertar_ruta.png"/></span> Ofertar Ruta</div>
             <div  class="elementsSidebar"><span id="Notificaciones"><img id="icon_notifications" src="./images/notificacion.png"/></span>Notificacion</div>
-            </div>
-            <div id="contenedor">
-                
-                <div id="fondo_perfil" class="foto"></div>
-                <div class="perfil">
-                    <div class="foto_perfil"><img id="foto_perfil" class="imagen_perfil"/></div>
-                    <div class="info">
-                        <p id="nombre_usuario" class="info_txt">#{usuarioBean.usuario.nombre} #{usuarioBean.usuario.apellido}</p>
-                        <p id="usuario" class="info_txt">#{usuarioBean.usuario.user}</p>
-                    </div>
+        </div>
+        <div id="contenedor">
+            <div id="fondo_perfil" class="foto"></div>
+            <div class="perfil">
+                <div class="foto_perfil"><img id="foto_perfil" class="imagen_perfil"/></div>
+                <div class="info">
+                    <p id="nombre_usuario" class="info_txt">#{usuarioBean.usuario.nombre} #{usuarioBean.usuario.apellido}</p>
+                    <p id="usuario" class="info_txt">#{usuarioBean.usuario.user}</p>
                 </div>
+            </div>
             <div class="publicar">
                 <h:form>
                     <h:inputTextarea id="comentario"></h:inputTextarea>
                     <h:commandButton id="publicar" value="publicar"></h:commandButton>
                 </h:form>
-        </div>
-        <div id="informacion_usuario">
-            <div id="datos_usuario">
-                <p class="info_user">Datos de Usuario</p>
-                <div id="nombre" class="user_data">#{usuarioBean.usuario.nombre}</div>
-                <div id="apellido" class="user_data">#{usuarioBean.usuario.apellido}</div>
-                <div id="direccion" class="user_data">#{usuarioBean.usuario.direccion}</div>
-                <div id="email" class="user_data">#{usuarioBean.usuario.email}</div>
-                <div id="telefono" class="user_data">#{usuarioBean.usuario.telefono}</div>
-                <div id="celular" class="user_data">#{usuarioBean.usuario.celular}</div>
             </div>
-            <div id="vehiculo">
-                <p class="info_user">Vehiculo</p>
-                <div>Matricula: #{usuarioBean.usuario.auto.matricula}</div>
-                <div>Modelo: #{usuarioBean.usuario.auto.modelo}</div>
-                <div>Marca: #{usuarioBean.usuario.auto.marca}</div>
-                <div>Color: #{usuarioBean.usuario.auto.color}</div>
-                <div>Capacidad: #{usuarioBean.usuario.auto.capacidad}</div>
-            </div>
-        <div id="amigos">
-                <p class="info_user">Amigos </p>
-                <c:forEach items="#{amistadBean.obtenerAmigos(usuarioBean.usuario.idUsuario)}" var="amigo">
-                    <ui:param name="usuario_amigo" value="#{usuarioBean.obtenerDatos(amigo.usuarioByUser2.idUsuario)}"></ui:param>
-                    <div>#{usuario_amigo.nombre} #{usuario_amigo.apellido}</div>
+            <div id="informacion_usuario">
+                <div id="datos_usuario">
+                    <p class="info_user">Datos de Usuario</p>
+                    <div id="nombre" class="user_data">#{usuarioBean.usuario.nombre}</div>
+                    <div id="apellido" class="user_data">#{usuarioBean.usuario.apellido}</div>
+                    <div id="direccion" class="user_data">#{usuarioBean.usuario.direccion}</div>
+                    <div id="email" class="user_data">#{usuarioBean.usuario.email}</div>
+                    <div id="telefono" class="user_data">#{usuarioBean.usuario.telefono}</div>
+                    <div id="celular" class="user_data">#{usuarioBean.usuario.celular}</div>
+                </div>
+                <div id="vehiculo">
+                    <p class="info_user">Vehiculo</p>
+                    <div>Matricula: #{usuarioBean.usuario.auto.matricula}</div>
+                    <div>Modelo: #{usuarioBean.usuario.auto.modelo}</div>
+                    <div>Marca: #{usuarioBean.usuario.auto.marca}</div>
+                    <div>Color: #{usuarioBean.usuario.auto.color}</div>
+                    <div>Capacidad: #{usuarioBean.usuario.auto.capacidad}</div>
+                </div>
+                <div id="amigos">
+                    <p class="info_user">Amigos </p>
+                    <c:forEach items="#{amistadBean.obtenerAmigos(usuarioBean.usuario.idUsuario)}" var="amigo">
+                        <ui:param name="usuario_amigo" value="#{usuarioBean.obtenerDatos(amigo.usuarioByUser2.idUsuario)}"></ui:param>
+                        <div>#{usuario_amigo.nombre} #{usuario_amigo.apellido}</div>
+                    </c:forEach>
+                </div>            
+            </div>  
+            <div id="publicaciones" class="publicaciones">
+                <c:forEach items="#{noticiaBean.noticiaUsuario(usuarioBean.usuario.idUsuario)}" var="noticia">                
+                    <div id="noticia#{noticia.idNoticia}" class="noticia">
+                        <div id="usuario">#{noticia.usuario.user}</div>
+                        <div id="hora_publicacion">#{noticia.fecha}</div>
+                        <p id="descripcion">#{noticia.descripcion}</p>
+                        <input type="text" id="texto0" placeholder="comentario"/>
+                        <input type="button" id="boton0" value="ingresar"/>
+                        <div id="comentarios">
+                            <c:forEach items="#{comentarioBean.obtenerComentarios(noticia.idNoticia)}" var="comentario">
+                                <div id="usuario_comentario">#{comentario.usuario.user}</div>
+                                <div id="comentario">#{comentario.descripcion}</div>
+                            </c:forEach>
+                        </div>
+                    </div>
                 </c:forEach>
-            </div>
-            
-        </div>  
-                
-    </div>
+            </div>        
+        </div>
     </h:body>
 </html>

@@ -18,4 +18,5 @@ public interface ComentarioDAO {
     public void borrar(Comentario nuevo);
     public Comentario cargar(Integer nuevo);
     public List<Comentario> listar();
+    public List<Comentario> obtenerComentarios(int idNoticia);
 }

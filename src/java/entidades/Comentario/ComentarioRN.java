@@ -34,4 +34,8 @@ public class ComentarioRN {
     public List<Comentario> listar(){
         return this.nuevo.listar();
     }
+    
+    public List<Comentario> obtenerComentarios(int idNoticia){
+        return this.nuevo.obtenerComentarios(idNoticia);
+    }
 }

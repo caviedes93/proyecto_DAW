@@ -6,10 +6,10 @@
 
 package entidades.Usuario;
 
-import entidades.Amistad.Amistad;
-import entidades.Amistad.AmistadRN;
-import entidades.Auto.Auto;
-import entidades.Auto.AutoRN;
+import entidades.Comentario.Comentario;
+import entidades.Comentario.ComentarioRN;
+import entidades.Noticia.Noticia;
+import entidades.Noticia.NoticiaRN;
 import java.util.List;
 
 /**
@@ -18,9 +18,9 @@ import java.util.List;
  */
 public class mian {
     public static void main(String[] args){
-        AmistadRN user=new AmistadRN();
+        ComentarioRN user=new ComentarioRN();
         
-        List<Amistad> lista = user.obtenerAmigos(1);
+        List<Comentario> lista = user.obtenerComentarios(1);
         for(int i=0;i<lista.size();i++){
             System.out.println(lista.get(i));
         }

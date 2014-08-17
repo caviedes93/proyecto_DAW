@@ -20,4 +20,5 @@ public interface AmistadDAO {
     public Amistad cargar(Integer amistad);
     public List<Amistad> listar();
     public List<Amistad> obtenerAmigos(int idUsuario);
+    
 }

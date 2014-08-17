@@ -7,7 +7,10 @@
 package entidades.Comentario;
 
 import java.util.List;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
+import org.hibernate.criterion.Criterion;
+import org.hibernate.criterion.Restrictions;
 
 /**
  *
@@ -43,6 +46,14 @@ public class ComentarioDAOHibernate implements ComentarioDAO{
     @Override
     public List<Comentario> listar() {
         return this.sesion.createCriteria(Comentario.class).list();
+    }
+
+    @Override
+    public List<Comentario> obtenerComentarios(int idNoticia) {
+        Criterion res= Restrictions.sqlRestriction("idNoticia='"+idNoticia+"'");
+        Criteria criteria = this.sesion.createCriteria(Comentario.class);
+        criteria.add(res);
+        return criteria.list();
     }
     
 }

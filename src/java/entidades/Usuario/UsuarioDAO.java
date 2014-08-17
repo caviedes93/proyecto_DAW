@@ -19,6 +19,6 @@ public interface UsuarioDAO {
     public void borrar(Usuario usuario);
     public Usuario cargar(Integer idUsuario);
     public List<Usuario> listar();
-    public Usuario validarUsuario(String user, String pass);
+    public Usuario obtenerUsuario(String user);
     public boolean validaUsuario(String user, String pass);
 }

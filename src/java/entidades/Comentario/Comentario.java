@@ -55,6 +55,9 @@ public class Comentario  implements java.io.Serializable {
         this.descripcion = descripcion;
     }
 
+    @Override
+    public String toString() {
+        return "Comentario{" + "idComentario=" + idComentario + ", descripcion=" + descripcion + '}';
+    }
+
 }
-
-

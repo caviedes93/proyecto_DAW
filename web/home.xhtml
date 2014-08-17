@@ -32,8 +32,22 @@ and open the template in the editor.
                     <div id="imagen3"><img id="im3"/></div>
                 </div>               
         <div id="Noticias_title">Noticias mas Recientes</div>
-        <div id="contenedor_noticias">
-            
+        <div id="Contenedor_noticias" class="noticias">
+            <c:forEach items="#{noticiaBean.noticiasGlobales(usuarioBean.usuario.idUsuario)}" var="noticia">                
+                <div id="noticia#{noticia.idNoticia}" class="noticia">
+                    <div id="usuario">#{noticia.usuario.user}</div>
+                    <div id="hora_publicacion">#{noticia.fecha}</div>
+                    <p id="descripcion">#{noticia.descripcion}</p>
+                    <input type="text" id="texto0" placeholder="comentario"/>
+                    <input type="button" id="boton0" value="ingresar"/>
+                    <div id="comentarios">
+                        <c:forEach items="#{comentarioBean.obtenerComentarios(noticia.idNoticia)}" var="comentario">
+                            <div id="usuario_comentario">#{comentario.usuario.user}</div>
+                            <div id="comentario">#{comentario.descripcion}</div>
+                        </c:forEach>
+                    </div>
+                </div>
+            </c:forEach>
         </div>
     </h:body>
 </html>
