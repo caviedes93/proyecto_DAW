@@ -36,4 +36,8 @@ public class RutaRN {
     public List<Ruta> listar(){
         return this.user.listar();
     }
+    
+    public List<Ruta> obtenerRutas(String fecha){
+        return this.user.obtenerRuta(fecha);
+    }
 }

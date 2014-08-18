@@ -20,4 +20,5 @@ public interface RutaDAO {
     public void borrar(Ruta nuevo);
     public Ruta cargar(Integer nuevo);
     public List<Ruta> listar();
+    public List<Ruta> obtenerRuta(String fecha);
 }

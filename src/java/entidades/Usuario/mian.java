@@ -10,6 +10,8 @@ import entidades.Comentario.Comentario;
 import entidades.Comentario.ComentarioRN;
 import entidades.Noticia.Noticia;
 import entidades.Noticia.NoticiaRN;
+import entidades.Ruta.Ruta;
+import entidades.Ruta.RutaRN;
 import java.util.List;
 
 /**
@@ -18,9 +20,9 @@ import java.util.List;
  */
 public class mian {
     public static void main(String[] args){
-        ComentarioRN user=new ComentarioRN();
+        RutaRN user=new RutaRN();
         
-        List<Comentario> lista = user.obtenerComentarios(1);
+        List<Ruta> lista = user.obtenerRutas("1");
         for(int i=0;i<lista.size();i++){
             System.out.println(lista.get(i));
         }

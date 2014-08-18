@@ -9,7 +9,10 @@ package entidades.Ruta;
 import entidades.Amistad.*;
 import entidades.Auto.*;
 import java.util.List;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
+import org.hibernate.criterion.Criterion;
+import org.hibernate.criterion.Restrictions;
 
 /**
  *
@@ -45,5 +48,12 @@ public class RutaDAOHibernate implements RutaDAO{
     @Override
     public List<Ruta> listar() {
         return this.sesion.createCriteria(Ruta.class).list();
+    }
+    
+    public List<Ruta> obtenerRuta(String fecha){
+        Criterion res= Restrictions.sqlRestriction("fecha='"+fecha+"'");
+        Criteria criteria = this.sesion.createCriteria(Ruta.class);
+        criteria.add(res);
+        return criteria.list(); 
     }
 }

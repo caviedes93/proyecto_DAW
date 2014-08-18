@@ -105,8 +105,10 @@ public class Ruta  implements java.io.Serializable {
         this.solicituds = solicituds;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Ruta{" + "idRuta=" + idRuta + ", fecha=" + fecha + ", latitudOrigen=" + latitudOrigen + ", longitudOrigen=" + longitudOrigen + ", latitudDestino=" + latitudDestino + ", longitudDestino=" + longitudDestino + '}';
+    }
 
 }
 

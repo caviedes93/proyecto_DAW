@@ -20,7 +20,7 @@
                 <h:outputLabel id="lblUsuario" value="Usuario:"></h:outputLabel>
                 <h:inputText id="usuario" class="text_box" value="#{usuarioBean.user}" size="20" ></h:inputText>
                 <h:outputLabel id="lblPass" value="Contraseña: "></h:outputLabel>
-                <h:inputText id="contrasena" class="text_box" value="#{usuarioBean.pass}" ></h:inputText>
+                <h:inputSecret id="contrasena" class="text_box" value="#{usuarioBean.pass}" ></h:inputSecret>>
                 <h:commandButton id="iniciar" class="boton" value="Iniciar sesión" action="#{usuarioBean.validar()}"></h:commandButton>
             </h:form>
         </div>

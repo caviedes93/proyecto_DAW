@@ -23,6 +23,16 @@
     <managed-bean-class>entidades.web.ComentarioBean</managed-bean-class>
     <managed-bean-scope>request</managed-bean-scope>
 </managed-bean>
+<managed-bean>
+    <managed-bean-name>rutaBean</managed-bean-name>
+    <managed-bean-class>entidades.web.RutaBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+<managed-bean>
+    <managed-bean-name>solicitudBean</managed-bean-name>
+    <managed-bean-class>entidades.web.SolicitudBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
 <navigation-rule>
     <from-view-id>/index.xhtml</from-view-id>
     <navigation-case>
@@ -32,6 +42,13 @@
     <navigation-case>
         <from-outcome>error</from-outcome>
         <to-view-id>/index.xhtml</to-view-id>
+    </navigation-case>
+</navigation-rule>
+<navigation-rule>
+    <from-view-id>/buscarRuta.xhtml</from-view-id>
+    <navigation-case>
+        <from-outcome>aceptar</from-outcome>
+        <to-view-id>/faces/buscarRuta.xhtml</to-view-id>
     </navigation-case>
 </navigation-rule>
 </faces-config>
